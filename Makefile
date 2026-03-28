@@ -20,6 +20,7 @@ all: $(NAME)
 $(NAME):  $(LIBFT) $(OBJS)
 	cp $(LIBFT) $(NAME)
 	$(AR) $(NAME) $(OBJS)
+	ranlib $(NAME)
 
 $(LIBFT):
 	$(MAKE) -C libft

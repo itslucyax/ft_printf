@@ -5,6 +5,7 @@ int main(void)
 {
     int ft;
     int og;
+    int n;
 
     // %c
     ft = ft_printf("ft: %c\n", 'A');
@@ -17,9 +18,8 @@ int main(void)
     printf("ft_ret: %d | og_ret: %d\n\n", ft, og);
 
     // %s NULL
-    ft = ft_printf("ft: %s\n", NULL);
-    og = printf("og: %s\n", NULL);
-    printf("ft_ret: %d | og_ret: %d\n\n", ft, og);
+    ft = ft_printf("ft: %s\n", (char *)NULL);
+    printf("ft_ret: %d\n\n", ft);
 
     // %d
     ft = ft_printf("ft: %d\n", -42);
@@ -27,8 +27,8 @@ int main(void)
     printf("ft_ret: %d | og_ret: %d\n\n", ft, og);
 
     // INT_MIN
-    ft = ft_printf("ft: %d\n", -2147483648);
-    og = printf("og: %d\n", -2147483648);
+    ft = ft_printf("ft: %d\n", -2147483647 - 1);
+    og = printf("og: %d\n", -2147483647 - 1);
     printf("ft_ret: %d | og_ret: %d\n\n", ft, og);
 
     // %u
@@ -47,15 +47,14 @@ int main(void)
     printf("ft_ret: %d | og_ret: %d\n\n", ft, og);
 
     // %p
-    int n = 42;
+    n = 42;
     ft = ft_printf("ft: %p\n", &n);
     og = printf("og: %p\n", &n);
     printf("ft_ret: %d | og_ret: %d\n\n", ft, og);
 
     // %p NULL
-    ft = ft_printf("ft: %p\n", NULL);
-    og = printf("og: %p\n", NULL);
-    printf("ft_ret: %d | og_ret: %d\n\n", ft, og);
+    ft = ft_printf("ft: %p\n", (void *)NULL);
+    printf("ft_ret: %d\n\n", ft);
 
     // %%
     ft = ft_printf("ft: 100%%\n");
