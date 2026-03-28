@@ -69,7 +69,7 @@ int	ft_print_hex(unsigned int n, int uppercase)
 	if (n >= 16)
 		count += ft_print_hex(n / 16, uppercase);
 	count += ft_print_char(base[n % 16]);
-	return ( count);
+	return (count);
 }
 
 /*ft_print_pointer
