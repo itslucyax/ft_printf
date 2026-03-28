@@ -53,9 +53,9 @@ static int	ft_dispatch(char specifier, va_list args)
 */
 int	ft_printf(const char *format, ...)
 {
-	va_list	args;
-	int	count;
-	int	i;
+	va_list		args;
+	int			count;
+	int			i;
 
 	if (!format)
 		return (-1);
