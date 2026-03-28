@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: luciamar <luciamar@student.42urduliz.co    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/28 16:11:32 by luciamar          #+#    #+#             */
+/*   Updated: 2026/03/28 16:11:32 by luciamar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 /* ── DISPATCHER ───────────────────────────────────────────────────────────────
 ** Recibe el carácter que viene después del '%' y la lista de argumentos.
 ** Llama al conversor correspondiente y devuelve cuántos chars imprimió.
-** ─────────────────────────────────────────────────────────────────────────── */
+** ───────────────────────────────────────────────────────────────────────────*/
 static int	ft_dispatch(char specifier, va_list args)
 {
 	if (specifier == 'c')
