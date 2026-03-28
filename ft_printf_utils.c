@@ -16,7 +16,7 @@ int	ft_print_char(int c)
 ** Si el punero es NULL imprime "(null)" como hace el printf original
 ** Devuelve el numero de caracteres impresos
 */
-int	ft_printf_str(char *str)
+int	ft_print_str(char *str)
 {
 	int	len;
 
