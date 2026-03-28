@@ -37,8 +37,8 @@ int	ft_print_nbr(int n)
 		count += ft_print_nbr(n / 10);
 	count += ft_print_char(n % 10 + '0');
 	return (count);
-	
 }
+
 int	ft_print_unsigned(unsigned int n)
 {
 	int	count;
@@ -49,6 +49,7 @@ int	ft_print_unsigned(unsigned int n)
 	count += ft_print_char(n % 10 + '0');
 	return (count);
 }
+
 /*ft_print_hex
 **Imprime un numero en hexadecimal (para %x y %X)
 **Si uppercase == 0 usa "0123456789abcdef"
@@ -70,6 +71,7 @@ int	ft_print_hex(unsigned int n, int uppercase)
 	count += ft_print_char(base[n % 16]);
 	return ( count);
 }
+
 /*ft_print_pointer
 **Imprime una direccion de memoria en hexadecimal (para %p)
 **Siempre lleva el prefijo "0x" delante
@@ -89,6 +91,7 @@ static	int	ft_print_hex_ptr(unsigned long n)
 	count += ft_print_char(base[n % 16]);
 	return (count);
 }
+
 int	ft_print_pointer(void *ptr)
 {
 	int	count;

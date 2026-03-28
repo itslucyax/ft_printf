@@ -20,28 +20,20 @@ static int	ft_dispatch(char specifier, va_list args)
 {
 	if (specifier == 'c')
 		return (ft_print_char(va_arg(args, int)));
-
 	if (specifier == 's')
 		return (ft_print_str(va_arg(args, char *)));
-
 	if (specifier == '%')
 		return (ft_print_percent());
-
 	if (specifier == 'd' || specifier == 'i')
 		return (ft_print_nbr(va_arg(args, int)));
-
 	if (specifier == 'u')
 		return (ft_print_unsigned(va_arg(args, unsigned int)));
-
 	if (specifier == 'x')
 		return (ft_print_hex(va_arg(args, unsigned int), 0));
-
 	if (specifier == 'X')
 		return (ft_print_hex(va_arg(args, unsigned int), 1));
-
 	if (specifier == 'p')
 		return (ft_print_pointer(va_arg(args, void *)));
-
 	return (0);
 }
 
