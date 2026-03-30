@@ -3,20 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_numbers.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciamar <luciamar@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: luciamar <luciamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/28 16:29:39 by luciamar          #+#    #+#             */
-/*   Updated: 2026/03/28 16:29:39 by luciamar         ###   ########.fr       */
+/*   Updated: 2026/03/30 18:08:15 by luciamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-/*ft_print_nbr
-** Imprime un entero con signo (para %d y %i)
-** Gestiona el caso especial de INT_MIN (-2147483648) porque si no lo negamos
-** se produce overflow: -INT_MIN no cabe en un int
-** Devuelve el numero de caracteres impreso
+/* ft_print_nbr
+** Prints a signed integer (for %d and %i)
+** Handles the special case of INT_MIN (-2147483648) because 
+** if we do not negate it
+** an overflow occurs: -INT_MIN does not fit into an int
+** Returns the number of characters printed
 */
 int	ft_print_nbr(int n)
 {
@@ -50,11 +51,11 @@ int	ft_print_unsigned(unsigned int n)
 	return (count);
 }
 
-/*ft_print_hex
-**Imprime un numero en hexadecimal (para %x y %X)
-**Si uppercase == 0 usa "0123456789abcdef"
-**Si uppercase == 1 usa "0123456789ABCDEF"
-**Devuelve el numero de caracteres impresos
+/* ft_print_hex
+** Prints a number in hexadecimal (for %x and %X)
+** If uppercase == 0, uses ‘0123456789abcdef’
+** If uppercase == 1, uses ‘0123456789ABCDEF’
+** Returns the number of characters printed
 */
 int	ft_print_hex(unsigned int n, int uppercase)
 {
@@ -73,11 +74,11 @@ int	ft_print_hex(unsigned int n, int uppercase)
 }
 
 /*ft_print_pointer
-**Imprime una direccion de memoria en hexadecimal (para %p)
-**Siempre lleva el prefijo "0x" delante
-**Usa unsigned long para cubrir sistemas de 64 bits (direcciones de 8 bytes)
-**Si el puntero es NULL imprime ("nil") como el printf original
-**Devuelve el numero de caracteres impresos
+** Prints a memory address in hexadecimal (for %p)
+** Always prefixes the address with ‘0x’
+** Uses `unsigned long` to support 64-bit systems (8-byte addresses)
+** If the pointer is NULL, it prints (‘nil’) as in the original printf
+** Returns the number of characters printed
 */
 static	int	ft_print_hex_ptr(unsigned long n)
 {

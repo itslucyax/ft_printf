@@ -4,17 +4,17 @@ CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 AR		= ar rcs
 
-#ARCHIVOS FUENTE
+#SOURCE FILES
 SRCS	= ft_printf.c \
 		  ft_printf_utils.c \
 		  ft_printf_numbers.c
 
 OBJS	= $(SRCS:.c=.o)
 
-#LIBRERIA
+#LIBFT
 LIBFT	= libft/libft.a
 
-#REGLAS
+#RULEs
 all: $(NAME)
 
 $(NAME):  $(LIBFT) $(OBJS)

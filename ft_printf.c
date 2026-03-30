@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciamar <luciamar@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: luciamar <luciamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/28 16:11:32 by luciamar          #+#    #+#             */
-/*   Updated: 2026/03/28 16:11:32 by luciamar         ###   ########.fr       */
+/*   Updated: 2026/03/30 18:10:30 by luciamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ static int	ft_dispatch(char specifier, va_list args)
 	return (0);
 }
 
-/*FUNCION PRINCIPAL
-** Recorre el format string cha a char
-** Si encuentra % llama al dispatcher con el siguiente char
-** Si es un char normal lo imprime directamente
-** Suma todo lo imprimido y lo devuelve
+/*MAIN FUNCTION
+** Iterates through the format string character by character
+** If it finds a %, it calls the dispatcher with the next character
+** If it is a normal character, it prints it directly
+** Adds up everything printed and returns the total
 */
 int	ft_printf(const char *format, ...)
 {

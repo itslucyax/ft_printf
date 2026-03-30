@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciamar <luciamar@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: luciamar <luciamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/28 16:39:00 by luciamar          #+#    #+#             */
-/*   Updated: 2026/03/28 16:39:00 by luciamar         ###   ########.fr       */
+/*   Updated: 2026/03/30 18:11:27 by luciamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@
 # include <unistd.h>
 # include "libft/libft.h"
 
-/*FUNCION PRINCIPAL*/
+/*MAIN FUNCTION*/
 int	ft_printf(const char *format, ...);
 
-/*UTILS: conversores simples*/
+/*UTILS: simple converters*/
 int	ft_print_char(int c);
 int	ft_print_str(char *str);
 int	ft_print_percent(void);
 
-/*NUMBERS: conversores numericos*/
+/*NUMBERS: digital-to-analogue converters*/
 int	ft_print_nbr(int n);
 int	ft_print_unsigned(unsigned int n);
 int	ft_print_hex(unsigned int n, int uppercase);

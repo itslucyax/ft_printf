@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciamar <luciamar@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: luciamar <luciamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/28 16:11:10 by luciamar          #+#    #+#             */
-/*   Updated: 2026/03/28 16:11:10 by luciamar         ###   ########.fr       */
+/*   Updated: 2026/03/30 18:09:12 by luciamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-/*ft_print_char
-** Imprime un solo caracter usando write()
-** Recibe int y no char porque va_arg promociona char a int automaticamente
-** Devuelve 1 prique siempre imprime exactemente 1 caracetr
+/* ft_print_char
+** Prints a single character using write()
+** Takes an int rather than a char because va_arg automatically casts the char 
+** to an int
+** Returns 1 because it always prints exactly one character
 */
 int	ft_print_char(int c)
 {
@@ -24,9 +25,10 @@ int	ft_print_char(int c)
 }
 
 /*ft_print_str
-** Imrpime un string char a char
-** Si el punero es NULL imprime "(null)" como hace el printf original
-** Devuelve el numero de caracteres impresos
+** Prints a string character by character
+** If the pointer is NULL, it prints ‘(null)’, 
+** just like the original printf function
+** Returns the number of characters printed
 */
 int	ft_print_str(char *str)
 {
@@ -40,9 +42,9 @@ int	ft_print_str(char *str)
 }
 
 /*ft_print_percent
-**Imprime carccter % literal
-** No consume argumento de va_list
-** Devuelve 1 porque imprime exactamente 1 char
+**Prints the literal % character
+** Does not consume a va_list argument
+** Returns 1 because it prints exactly 1 character
 */
 int	ft_print_percent(void)
 {
